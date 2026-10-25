@@ -1,0 +1,100 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-lightbox);
+  display: flex;
+  padding: clamp(0.75rem, 2vw, 1.5rem);
+  background-color: rgba(40, 38, 34, 0.94);
+  animation: overlayIn 0.25s ease;
+}
+
+@keyframes overlayIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-bottom: 0.9rem;
+}
+
+.category {
+  color: var(--color-sand);
+  font-size: var(--text-small);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(245, 241, 235, 0.35);
+  border-radius: 50%;
+  color: var(--color-on-ink);
+  transition: background-color var(--transition), border-color var(--transition);
+}
+
+.iconButton:hover {
+  background-color: rgba(245, 241, 235, 0.14);
+  border-color: rgba(245, 241, 235, 0.7);
+}
+
+.iconButton:focus-visible {
+  outline-color: var(--color-on-ink);
+}
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  min-height: 0;
+}
+
+.image {
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 13rem);
+  border-radius: var(--radius);
+}
+
+.caption {
+  max-width: 60ch;
+  color: rgba(245, 241, 235, 0.72);
+  font-size: var(--text-small);
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: 1rem;
+}
+
+.counter {
+  min-width: 4.5rem;
+  color: var(--color-sand);
+  font-size: var(--text-small);
+  letter-spacing: 0.1em;
+  text-align: center;
+}

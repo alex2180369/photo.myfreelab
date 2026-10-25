@@ -1,0 +1,46 @@
+/* Дизайн-токены: цвета, шрифты, отступы. Меняйте значения здесь. */
+:root {
+  /* Цвета */
+  --color-bg: #f5f1eb; /* тёплый белый — основной фон */
+  --color-sand: #d8c8b8; /* песочный — акцентные поверхности */
+  --color-sand-soft: #e9e0d5; /* светлый песочный — фоновые блоки */
+  --color-ink: #282622; /* графитовый — текст и кнопки */
+  --color-ink-soft: #3d3a34; /* графитовый при наведении */
+  --color-muted: #777066; /* тёплый серый — вторичный текст */
+  --color-line: #ddd3c6; /* тонкие линии и рамки */
+  --color-on-ink: #f5f1eb; /* светлый текст на графитовом */
+  --color-error: #a13d2d; /* ошибка формы */
+
+  /* Шрифты */
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+
+  /* Размеры текста (адаптивные) */
+  --text-hero: clamp(2.5rem, 1.4rem + 4.6vw, 5rem);
+  --text-h2: clamp(2rem, 1.3rem + 2.6vw, 3.4rem);
+  --text-h3: clamp(1.35rem, 1.1rem + 1vw, 1.8rem);
+  --text-lead: clamp(1.05rem, 1rem + 0.4vw, 1.25rem);
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+
+  /* Отступы */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --section-y: clamp(4.5rem, 3rem + 6vw, 8.5rem);
+  --container: 1240px;
+  --container-narrow: 720px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+
+  /* Оформление */
+  --radius: 2px;
+  --header-h: 72px;
+  --transition: 0.25s ease;
+
+  /* Слои */
+  --z-header: 100;
+  --z-menu: 120;
+  --z-lightbox: 200;
+}

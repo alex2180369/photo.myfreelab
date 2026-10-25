@@ -1,0 +1,109 @@
+.tabsWrap {
+  margin-bottom: var(--space-lg);
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem clamp(1rem, 3vw, 2.2rem);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.tab {
+  position: relative;
+  padding: 0.6rem 0 0.9rem;
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  transition: color var(--transition);
+}
+
+.tab::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-ink);
+  transform: scaleX(0);
+  transition: transform var(--transition);
+}
+
+.tab:hover {
+  color: var(--color-ink);
+}
+
+.tabActive {
+  color: var(--color-ink);
+  font-weight: 500;
+}
+
+.tabActive::after {
+  transform: scaleX(1);
+}
+
+/* ---------- Масонри-сетка ---------- */
+.grid {
+  columns: 1;
+  column-gap: var(--space-md);
+}
+
+.item {
+  break-inside: avoid;
+  margin: 0 0 var(--space-md);
+}
+
+.itemButton {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background-color: var(--color-sand-soft);
+  cursor: zoom-in;
+}
+
+.itemButton img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease;
+}
+
+.zoom {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: rgba(245, 241, 235, 0.88);
+  color: var(--color-ink);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.itemButton:hover img,
+.itemButton:focus-visible img {
+  transform: scale(1.025);
+}
+
+.itemButton:hover .zoom,
+.itemButton:focus-visible .zoom {
+  opacity: 1;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    columns: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    columns: 3;
+  }
+}
