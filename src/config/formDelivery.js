@@ -33,7 +33,7 @@ export const formDelivery = {
   googleSheets: {
     enabled: true,
     webAppUrl:
-      'https://script.google.com/macros/s/AKfycbxDCx9ihA6Mj_HmKl0DyYUi3qz6GTo_iaxVSel2r_0hlfwi0KSKfoXx2WscL2dShSe1/exec',
+      'https://script.google.com/macros/s/AKfycbymy7csfZY35SZP53O13DHC3PkIV5vDFC775UsWtwq1iznGw4myiUYPqRRUUVfVwIB7Gg/exec',
   },
 
   /**

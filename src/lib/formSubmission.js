@@ -8,6 +8,7 @@ import { formDelivery } from '../config/formDelivery';
 function buildPayload(values) {
   const now = new Date();
   return {
+    site: "photo.myfreelab.ru",
     name: values.name.trim(),
     contact: values.contact.trim(),
     shoot: values.shoot,
